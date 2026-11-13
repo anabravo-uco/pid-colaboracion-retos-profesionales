@@ -27,12 +27,11 @@
   "autoria_cita": "Bravo Castillo, A., Álvarez Cantador, R., Álvarez Turrado, B. G., Cabrera Vázquez, A., García Carrera, P., Misas Moreno, M., Rodríguez de Arriba, M. L., Romera Félix, E. M., Camacho López, A. y Ruiz Berindoague, C. V.",
   "anio": "2026",
   "version": "1.0",
-  "doi": "",
   "comunidad_zenodo": "https://zenodo.org/communities/innovacion-docente-psicologia-educacion-uco",
   "repositorio": "https://github.com/anabravo-uco/pid-colaboracion-retos-educacion",
   "licencia": "CC BY-NC-SA 4.0",
   "licencia_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es",
-  "correo_contacto": "",
+  "correo_contacto": "ana.bravo.uco1@gmail.com",
   "listas_youtube": [
     {
       "grado": "Educación Infantil",
@@ -52,6 +51,5 @@
     "Educación Primaria",
     "Psicología"
   ],
-  "goatcounter": "",
   "nota_logo": "Logotipo del proyecto creado por Ana Bravo Castillo con ayuda de IA generativa (Claude)."
 }
