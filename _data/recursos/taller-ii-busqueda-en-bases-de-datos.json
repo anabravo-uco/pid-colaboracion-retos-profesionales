@@ -1,0 +1,30 @@
+{
+  "visible": true,
+  "licencia": "CC BY-NC-SA 4.0 (la del proyecto)",
+  "nota_licencia": "Las diapositivas 5 y 7 reproducen sin cambios diapositivas de Gómez-López (2022), publicadas con licencia CC BY-NC-ND 4.0, y mantienen esa licencia. Las capturas de bases de datos y webs de terceros conservan sus derechos.",
+  "autoria": [],
+  "ia": {
+    "usada": "Sin declarar"
+  },
+  "actualizado": "2026-11-13",
+  "orden": 4,
+  "titulo": "Taller II. Búsqueda en bases de datos",
+  "tipo": "Taller",
+  "actividad": "De la teoría a la práctica",
+  "ediciones": [
+    "2025-26"
+  ],
+  "grados": [
+    "Educación Infantil",
+    "Educación Primaria",
+    "Psicología"
+  ],
+  "descripcion": "Taller sobre búsqueda en bases de datos científicas (acceso desde la Biblioteca de la UCO, operadores booleanos y consejos de búsqueda), lectura y valoración de la calidad de un artículo científico y normas APA 7.ª edición.",
+  "materiales": [
+    {
+      "nombre": "Diapositivas del taller (PDF)",
+      "formato": "Documento PDF",
+      "archivo": "/materiales/03_Taller_II_Busqueda_bases_datos.pdf"
+    }
+  ]
+}

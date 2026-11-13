@@ -1,0 +1,41 @@
+{
+  "nombre": "Ana",
+  "apellidos": "Bravo Castillo",
+  "orcid": "0000-0003-3312-5523",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 1,
+  "participaciones": [
+    {
+      "edicion": "2025-26",
+      "papel": "Coordinación (IP)",
+      "roles": [
+        "Conceptualización",
+        "Curación de datos",
+        "Análisis formal",
+        "Adquisición de financiación",
+        "Investigación",
+        "Metodología",
+        "Administración del proyecto",
+        "Recursos",
+        "Software",
+        "Supervisión",
+        "Validación",
+        "Visualización",
+        "Redacción – borrador original",
+        "Redacción – revisión y edición"
+      ],
+      "grado": "Principal"
+    },
+    {
+      "edicion": "2026-27",
+      "papel": "Co-coordinación",
+      "roles": [
+        "Conceptualización",
+        "Adquisición de financiación"
+      ],
+      "grado": "Principal"
+    }
+  ],
+  "visible": true
+}

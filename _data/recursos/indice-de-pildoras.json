@@ -1,0 +1,35 @@
+{
+  "visible": true,
+  "licencia": "CC BY-NC-SA 4.0 (la del proyecto)",
+  "nota_licencia": "Los vídeos están alojados en YouTube y no forman parte del depósito ni de su licencia: se pueden ver y enlazar, pero no descargar ni modificar.",
+  "autoria": [],
+  "ia": {
+    "usada": "Sin declarar"
+  },
+  "actualizado": "2026-11-13",
+  "orden": 2,
+  "titulo": "Índice de píldoras audiovisuales",
+  "tipo": "Índice de píldoras",
+  "actividad": "Ponte las gafas para observar",
+  "ediciones": [
+    "2025-26"
+  ],
+  "grados": [
+    "Educación Infantil",
+    "Educación Primaria",
+    "Psicología"
+  ],
+  "descripcion": "Índice de las píldoras audiovisuales con el profesional que plantea la situación-problema, sus destinatarios, los contenidos de la asignatura relacionados, el enlace y la duración. Las píldoras se consultan en YouTube.",
+  "materiales": [
+    {
+      "nombre": "Índice (Excel)",
+      "formato": "Hoja de cálculo",
+      "archivo": "/materiales/02_Pildoras_indice.xlsx"
+    },
+    {
+      "nombre": "Índice (CSV, UTF-8)",
+      "formato": "Datos abiertos (CSV)",
+      "archivo": "/materiales/02_Pildoras_indice.csv"
+    }
+  ]
+}

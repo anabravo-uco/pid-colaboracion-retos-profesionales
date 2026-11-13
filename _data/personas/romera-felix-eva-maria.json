@@ -1,0 +1,33 @@
+{
+  "nombre": "Eva María",
+  "apellidos": "Romera Félix",
+  "orcid": "0000-0002-9414-8019",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 8,
+  "participaciones": [
+    {
+      "edicion": "2025-26",
+      "papel": "Miembro del equipo",
+      "roles": [
+        "Conceptualización",
+        "Investigación",
+        "Metodología",
+        "Recursos",
+        "Software",
+        "Validación",
+        "Visualización",
+        "Redacción – borrador original",
+        "Redacción – revisión y edición"
+      ],
+      "grado": "Igual"
+    },
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}

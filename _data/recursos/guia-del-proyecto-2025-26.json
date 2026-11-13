@@ -1,0 +1,35 @@
+{
+  "visible": true,
+  "licencia": "CC BY-NC-SA 4.0 (la del proyecto)",
+  "nota_licencia": "",
+  "autoria": [],
+  "ia": {
+    "usada": "Sin declarar"
+  },
+  "actualizado": "2026-11-13",
+  "orden": 1,
+  "titulo": "Guía del proyecto (edición 2025-26)",
+  "tipo": "Guía docente",
+  "actividad": "Todo el proyecto",
+  "ediciones": [
+    "2025-26"
+  ],
+  "grados": [
+    "Educación Infantil",
+    "Educación Primaria",
+    "Psicología"
+  ],
+  "descripcion": "Guía para replicar el proyecto: finalidad y ejes, asignaturas en las que se aplicó, resultados de aprendizaje, secuencia de actividades por grado, evaluación, resultados y lecciones aprendidas.",
+  "materiales": [
+    {
+      "nombre": "Guía del proyecto (PDF)",
+      "formato": "Documento PDF",
+      "archivo": "/materiales/01_Guia_del_proyecto_2025-26.pdf"
+    },
+    {
+      "nombre": "Fuente editable (DOCX)",
+      "formato": "Documento editable",
+      "archivo": "/materiales/fuentes/01_Guia_del_proyecto_2025-26.docx"
+    }
+  ]
+}

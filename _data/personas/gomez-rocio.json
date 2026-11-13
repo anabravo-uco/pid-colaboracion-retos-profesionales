@@ -1,0 +1,17 @@
+{
+  "nombre": "Rocío",
+  "apellidos": "Gómez",
+  "orcid": "",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 11,
+  "participaciones": [
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}

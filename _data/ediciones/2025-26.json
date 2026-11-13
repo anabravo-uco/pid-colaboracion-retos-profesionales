@@ -1,0 +1,64 @@
+{
+  "curso": "2025-26",
+  "codigo": "2025-1-4010",
+  "estado": "Finalizada",
+  "convocatoria": "Plan de Innovación y Buenas Prácticas Docentes 2025-2026 (Vicerrectorado de Estudios de Grado, Calidad e Innovación Docente)",
+  "financiacion": 1600,
+  "inicio": "2025-10-01",
+  "fin": "2026-07-31",
+  "version_zenodo": "1.0",
+  "doi_version": "",
+  "resumen": "Primera edición. Se grabaron 19 píldoras audiovisuales con 12 profesionales en activo y se elaboraron los talleres de matriz DAFO y de búsqueda en bases de datos, la escala de coevaluación y autoevaluación y la guía del proyecto.",
+  "asignaturas": [
+    {
+      "titulacion": "Grado en Educación Primaria",
+      "asignatura": "Psicología de la Educación y del Desarrollo",
+      "curso": "1º",
+      "sesiones": 4,
+      "estudiantes": 247,
+      "nota_media": 8.2,
+      "producto": "Píldora en vídeo",
+      "observaciones": "Práctica 3 de la asignatura (diseño condensado en 4 sesiones)."
+    },
+    {
+      "titulacion": "Grado en Educación Infantil",
+      "asignatura": "Psicología de la Educación",
+      "curso": "2º",
+      "sesiones": 10,
+      "estudiantes": 178,
+      "nota_media": 7.9,
+      "producto": "Póster y píldora en vídeo",
+      "observaciones": "Proyecto único de prácticas; congreso en el hall de la Facultad en dos turnos."
+    },
+    {
+      "titulacion": "Grado en Psicología",
+      "asignatura": "Psicología de la Educación II",
+      "curso": "3º",
+      "sesiones": 10,
+      "estudiantes": 60,
+      "nota_media": 8.9,
+      "producto": "Página web o blog",
+      "observaciones": "Proyecto único de prácticas, adaptado a contextos sociales más amplios."
+    }
+  ],
+  "estudiantes_previstos": 400,
+  "equipos": 117,
+  "equipos_comparten": 85,
+  "nota_media": 8.1,
+  "novedades": [
+    "19 píldoras audiovisuales de 12 profesionales en activo",
+    "Taller I. Matriz DAFO como herramienta de análisis educativo",
+    "Taller II. Búsqueda en bases de datos",
+    "Escala de coevaluación entre equipos y autoevaluación",
+    "Guía del proyecto y batería de evaluación pre-post"
+  ],
+  "lecciones": [
+    "Con cuatro sesiones algunas fases quedan cortas; el diseño completo necesita unas diez.",
+    "Pedir a la vez póster y vídeo resultó excesivo en Infantil; conviene elegir un producto.",
+    "Organizar el congreso en dos sesiones mejora la escucha y reduce el ruido.",
+    "Conviene trabajar explícitamente la colaboración: muchos equipos se repartían las partes sin integrarlas.",
+    "Una reflexión inicial sobre el propio estilo de aprendizaje reduce el estrés en tareas abiertas.",
+    "El alumnado usa la IA generativa de forma poco crítica: se incorpora un taller específico en 2026-27.",
+    "Invitar a los profesionales al cierre, con una alternativa (vídeo de respuesta) si no pueden asistir."
+  ]
+}

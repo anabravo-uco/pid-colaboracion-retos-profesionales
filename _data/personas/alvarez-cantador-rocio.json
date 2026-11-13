@@ -1,0 +1,34 @@
+{
+  "nombre": "Rocío",
+  "apellidos": "Álvarez Cantador",
+  "orcid": "0009-0001-8335-9355",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 2,
+  "participaciones": [
+    {
+      "edicion": "2025-26",
+      "papel": "Miembro del equipo",
+      "roles": [
+        "Conceptualización",
+        "Análisis formal",
+        "Investigación",
+        "Metodología",
+        "Recursos",
+        "Software",
+        "Validación",
+        "Visualización",
+        "Redacción – borrador original",
+        "Redacción – revisión y edición"
+      ],
+      "grado": "Igual"
+    },
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}

@@ -1,0 +1,35 @@
+{
+  "visible": true,
+  "licencia": "CC BY-NC-SA 4.0 (la del proyecto)",
+  "nota_licencia": "",
+  "autoria": [],
+  "ia": {
+    "usada": "Sin declarar"
+  },
+  "actualizado": "2026-11-13",
+  "orden": 3,
+  "titulo": "Taller I. Matriz DAFO como herramienta de análisis educativo",
+  "tipo": "Taller",
+  "actividad": "Ponte las gafas para observar",
+  "ediciones": [
+    "2025-26"
+  ],
+  "grados": [
+    "Educación Infantil",
+    "Educación Primaria",
+    "Psicología"
+  ],
+  "descripcion": "Presenta la matriz DAFO (debilidades, amenazas, fortalezas y oportunidades) como herramienta para analizar una situación educativa y guía su aplicación a la píldora asignada a cada equipo: visionado individual, puesta en común y elaboración de la matriz en equipo. La versión publicada es la utilizada en Educación Infantil (cinco píldoras).",
+  "materiales": [
+    {
+      "nombre": "Diapositivas del taller (PDF)",
+      "formato": "Documento PDF",
+      "archivo": "/materiales/03_Taller_I_Matriz_DAFO.pdf"
+    },
+    {
+      "nombre": "Matriz DAFO interactiva",
+      "formato": "Aplicación web (Google Apps Script)",
+      "url": "https://script.google.com/macros/s/AKfycbyECQ9gnayC_DSi3tNbyB8ABPYxdnlUQvy-wXCjifUgh-KNW5BC7lk9D0cFsOO5Lp-1/exec"
+    }
+  ]
+}

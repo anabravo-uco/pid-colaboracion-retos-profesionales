@@ -1,0 +1,8 @@
+# Configuración mínima para GitHub Pages (Jekyll).
+# Jekyll solo se usa para unir los archivos de _data/ en los archivos de datos/ que lee la web.
+title: Fomentando la colaboración para afrontar los retos profesionales actuales en la educación
+lang: es
+exclude:
+  - README.md
+  - LICENSE
+  - CITATION.cff

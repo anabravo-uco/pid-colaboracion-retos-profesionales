@@ -1,0 +1,30 @@
+{
+  "visible": true,
+  "licencia": "CC BY-NC-SA 4.0 (la del proyecto)",
+  "nota_licencia": "Los instrumentos publicados por otras personas autoras se citan pero no se reproducen; conservan sus derechos. Los datos recogidos no se publican.",
+  "autoria": [],
+  "ia": {
+    "usada": "Sin declarar"
+  },
+  "actualizado": "2026-11-13",
+  "orden": 6,
+  "titulo": "Instrumentos de evaluación del proyecto (pre-post)",
+  "tipo": "Instrumento de evaluación",
+  "actividad": "Evaluación del proyecto",
+  "ediciones": [
+    "2025-26"
+  ],
+  "grados": [
+    "Educación Infantil",
+    "Educación Primaria",
+    "Psicología"
+  ],
+  "descripcion": "Ficha de la batería de cuestionarios aplicada al estudiantado antes y después del proyecto: desarrollo competencial, autoeficacia académica y ante la práctica, motivación, prácticas educativas y valoración de la práctica. Indica constructos, número de ítems, formato de respuesta y fuente de cada instrumento.",
+  "materiales": [
+    {
+      "nombre": "Ficha de instrumentos (PDF)",
+      "formato": "Documento PDF",
+      "archivo": "/materiales/04_Instrumentos_evaluacion_proyecto.pdf"
+    }
+  ]
+}

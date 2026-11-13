@@ -1,0 +1,17 @@
+{
+  "nombre": "Alejandra",
+  "apellidos": "Medina Casanueva",
+  "orcid": "0009-0004-6172-0551",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 12,
+  "participaciones": [
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}

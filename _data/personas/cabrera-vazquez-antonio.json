@@ -1,0 +1,32 @@
+{
+  "nombre": "Antonio",
+  "apellidos": "Cabrera Vázquez",
+  "orcid": "0000-0001-9062-7197",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 4,
+  "participaciones": [
+    {
+      "edicion": "2025-26",
+      "papel": "Miembro del equipo",
+      "roles": [
+        "Conceptualización",
+        "Metodología",
+        "Recursos",
+        "Software",
+        "Validación",
+        "Visualización",
+        "Redacción – borrador original",
+        "Redacción – revisión y edición"
+      ],
+      "grado": "De apoyo"
+    },
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}

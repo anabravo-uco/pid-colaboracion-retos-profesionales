@@ -1,0 +1,31 @@
+{
+  "nombre": "María Luisa",
+  "apellidos": "Rodríguez de Arriba",
+  "orcid": "0000-0002-1693-257X",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 7,
+  "participaciones": [
+    {
+      "edicion": "2025-26",
+      "papel": "Miembro del equipo",
+      "roles": [
+        "Investigación",
+        "Metodología",
+        "Software",
+        "Validación",
+        "Visualización",
+        "Redacción – borrador original",
+        "Redacción – revisión y edición"
+      ],
+      "grado": "Igual"
+    },
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}

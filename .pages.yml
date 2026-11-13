@@ -1,0 +1,434 @@
+# Panel de edición (Pages CMS · https://app.pagescms.org)
+# Solo pueden entrar las personas con permiso de escritura en este repositorio.
+# Cada curso nuevo: añade la edición (p. ej. "2027-28") a TODAS las listas "values" de edición de este archivo
+# (busca "2026-27" y añade el curso siguiente debajo). Es el único cambio que hay que hacer aquí cada año.
+
+media:
+  input: materiales
+  output: /materiales
+
+content:
+  # ------------------------------------------------------------------ EDICIONES
+  - name: ediciones
+    label: Ediciones
+    type: collection
+    path: _data/ediciones
+    format: json
+    filename:
+      template: "{fields.curso}.json"
+      field: create
+    view:
+      primary: curso
+      fields: [curso, codigo, estado]
+      sort: [curso]
+      default: { sort: curso, order: desc }
+    fields:
+      - { name: curso, label: Curso académico, type: string, required: true, pattern: "^[0-9]{4}-[0-9]{2}$", description: "Formato 2027-28. Debe coincidir con el que eliges en personas, píldoras y recursos." }
+      - { name: codigo, label: Código del proyecto, type: string, description: "Por ejemplo, 2026-1-4018." }
+      - name: estado
+        label: Estado
+        type: select
+        default: En curso
+        options: { values: [Prevista, En curso, Finalizada] }
+      - { name: convocatoria, label: Convocatoria, type: string }
+      - { name: financiacion, label: Financiación concedida (€), type: number, description: "Solo el número. Déjalo vacío si aún no se ha resuelto." }
+      - { name: inicio, label: Inicio, type: date, options: { format: yyyy-MM-dd } }
+      - { name: fin, label: Fin, type: date, options: { format: yyyy-MM-dd } }
+      - { name: version_zenodo, label: Versión del depósito en Zenodo, type: string, description: "La versión que recoge esta edición (1.0, 2.0…)." }
+      - { name: doi_version, label: DOI de esa versión, type: string, description: "El DOI propio de la versión, p. ej. 10.5281/zenodo.1234567. Lo da Zenodo al publicarla." }
+      - { name: resumen, label: Resumen de la edición, type: text }
+      - name: asignaturas
+        label: Asignaturas y participación
+        type: object
+        description: Una entrada por asignatura. Los totales de estudiantes de la web se calculan sumando estas cifras.
+        list:
+          collapsible: { collapsed: true, summary: "{asignatura} · {titulacion} · {estudiantes} estudiantes" }
+        fields:
+          - name: titulacion
+            label: Titulación
+            type: select
+            options: { values: [Grado en Educación Infantil, Grado en Educación Primaria, Grado en Psicología] }
+          - name: asignatura
+            label: Asignatura
+            type: select
+            options:
+              values:
+                - Psicología de la Educación
+                - Psicología del Desarrollo
+                - Psicología de la Educación y del Desarrollo
+                - Psicología de la Educación II
+          - name: curso
+            label: Curso
+            type: select
+            options: { values: ["1º", "2º", "3º", "4º"] }
+          - { name: sesiones, label: Sesiones dedicadas al proyecto, type: number, options: { min: 0 } }
+          - { name: grupos, label: Grupos-clase, type: number, options: { min: 0 } }
+          - { name: estudiantes, label: Estudiantes, type: number, options: { min: 0 } }
+          - { name: equipos, label: Equipos de trabajo, type: number, options: { min: 0 }, description: "Opcional si solo conoces el total de la edición." }
+          - { name: nota_media, label: Nota media de la práctica, type: number, options: { min: 0, max: 10, step: 0.1 } }
+          - { name: producto, label: Producto final, type: string, description: "Póster, píldora en vídeo, página web…" }
+          - { name: observaciones, label: Observaciones, type: text }
+      - { name: estudiantes_previstos, label: Estudiantes previstos en la solicitud, type: number }
+      - { name: equipos, label: Equipos de trabajo (total), type: number }
+      - { name: equipos_comparten, label: Equipos que compartieron su propuesta con el profesional, type: number }
+      - { name: nota_media, label: Nota media global, type: number, options: { min: 0, max: 10, step: 0.1 } }
+      - { name: novedades, label: Materiales y novedades de la edición, type: string, list: true }
+      - { name: lecciones, label: Lecciones aprendidas, type: string, list: true }
+
+  # ------------------------------------------------------------------ PERSONAS
+  - name: personas
+    label: Equipo
+    type: collection
+    path: _data/personas
+    format: json
+    filename:
+      template: "{fields.apellidos}-{fields.nombre}.json"
+      field: create
+    view:
+      primary: apellidos
+      fields: [apellidos, nombre, orden_autoria]
+      sort: [orden_autoria, apellidos]
+      default: { sort: orden_autoria, order: asc }
+      search: [nombre, apellidos, orcid]
+    fields:
+      - { name: nombre, label: Nombre, type: string, required: true }
+      - { name: apellidos, label: Apellidos, type: string, required: true }
+      - { name: orcid, label: ORCID, type: string, pattern: "^$|^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$", description: "Solo el número, p. ej. 0000-0003-3312-5523." }
+      - { name: institucion, label: Institución, type: string, default: Universidad de Córdoba }
+      - { name: departamento, label: Departamento (opcional), type: string }
+      - name: orden_autoria
+        label: Orden en la autoría del depósito
+        type: number
+        description: "Regla: coordinación de la edición inicial y después orden alfabético; quien se incorpora va al final (por orden alfabético entre las incorporaciones de ese curso). No cambies los números ya asignados."
+      - name: participaciones
+        label: Participación por edición (CRediT)
+        type: object
+        description: Una entrada por curso en que la persona forma parte del equipo. Para que alguien deje de aparecer en un curso, no le añadas ese curso (no borres los anteriores).
+        list:
+          collapsible: { collapsed: true, summary: "{edicion} · {papel} · {grado}" }
+        fields:
+          - name: edicion
+            label: Edición
+            type: select
+            required: true
+            options: { values: ["2025-26", "2026-27", "2027-28"] }
+          - name: papel
+            label: Papel
+            type: select
+            options: { values: ["Coordinación (IP)", Co-coordinación, Miembro del equipo, Colaboración] }
+          - name: roles
+            label: Roles CRediT en esa edición
+            type: select
+            options:
+              multiple: true
+              values:
+                - Conceptualización
+                - Curación de datos
+                - Análisis formal
+                - Adquisición de financiación
+                - Investigación
+                - Metodología
+                - Administración del proyecto
+                - Recursos
+                - Software
+                - Supervisión
+                - Validación
+                - Visualización
+                - Redacción – borrador original
+                - Redacción – revisión y edición
+          - name: grado
+            label: Grado de participación
+            type: select
+            options: { values: [Principal, Igual, De apoyo] }
+          - { name: asignaturas, label: Asignaturas en las que lo aplicó (opcional), type: string, description: "Texto libre, p. ej. Psicología de la Educación (Infantil)." }
+          - { name: observaciones, label: Observaciones (opcional), type: text }
+      - { name: visible, label: Mostrar en la web, type: boolean, default: true }
+
+  # ------------------------------------------------------------------ PÍLDORAS
+  - name: pildoras
+    label: Píldoras
+    type: collection
+    path: _data/pildoras
+    format: json
+    filename:
+      template: "{fields.codigo}.json"
+      field: create
+    view:
+      primary: codigo
+      fields: [codigo, titulo, grado, edicion]
+      sort: [codigo, edicion]
+      default: { sort: codigo, order: asc }
+      search: [titulo, profesional, contenidos]
+    fields:
+      - { name: codigo, label: Código, type: string, required: true, pattern: "^P[0-9]{2,3}$", description: "Correlativo y sin reutilizar: P20, P21…" }
+      - name: edicion
+        label: Edición en que se grabó
+        type: select
+        required: true
+        options: { values: ["2025-26", "2026-27", "2027-28"] }
+      - name: grado
+        label: Grado
+        type: select
+        required: true
+        options: { values: [Educación Infantil, Educación Primaria, Psicología] }
+      - { name: bilingue, label: Grupo bilingüe, type: boolean, default: false }
+      - { name: asignatura, label: Asignatura (opcional), type: string }
+      - { name: profesional, label: Profesional que plantea la situación, type: string, description: "Solo si ha autorizado que aparezca su nombre." }
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: destinatarios, label: Destinatarios del caso (edad o curso), type: string }
+      - { name: contenidos, label: Contenidos de la asignatura relacionados, type: text }
+      - { name: youtube, label: Enlace de YouTube, type: string, pattern: "^$|^https://(www\\.)?(youtube\\.com|youtu\\.be)/.+", description: "La lista debe estar en «Pública» o «No listada»." }
+      - { name: duracion, label: Duración (min:s), type: string, pattern: "^$|^[0-9]{1,2}:[0-5][0-9]$" }
+      - name: estado
+        label: Estado
+        type: select
+        default: Disponible
+        options: { values: [Disponible, Enlace pendiente, En preparación] }
+      - { name: visible, label: Mostrar en la web, type: boolean, default: true }
+
+  # ------------------------------------------------------------------ RECURSOS
+  - name: recursos
+    label: Recursos
+    type: collection
+    path: _data/recursos
+    format: json
+    filename:
+      template: "{fields.titulo}.json"
+      field: create
+    view:
+      primary: titulo
+      fields: [titulo, tipo, actividad]
+      sort: [orden, titulo]
+      default: { sort: orden, order: asc }
+      search: [titulo, descripcion]
+    fields:
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: orden, label: Orden en la web, type: number }
+      - name: tipo
+        label: Tipo
+        type: select
+        options: { values: [Guía docente, Índice de píldoras, Taller, Instrumento de evaluación, Ficha de edición, Otro] }
+      - name: actividad
+        label: Actividad del proyecto en que se usa
+        type: select
+        options:
+          values:
+            - Todo el proyecto
+            - La competencia investigadora en educación
+            - Ponte las gafas para observar
+            - De la teoría a la práctica
+            - Construyendo un juicio propio
+            - Dando respuestas
+            - Transferencia de resultados
+            - Comunicamos ciencia
+            - Cada granito cuenta
+            - Evaluación del proyecto
+      - name: ediciones
+        label: Ediciones en que se ha usado
+        type: select
+        options: { multiple: true, values: ["2025-26", "2026-27", "2027-28"] }
+      - name: grados
+        label: Grados
+        type: select
+        options: { multiple: true, values: [Educación Infantil, Educación Primaria, Psicología] }
+      - { name: descripcion, label: Descripción, type: text }
+      - name: materiales
+        label: Materiales
+        type: object
+        list:
+          collapsible: { collapsed: true, summary: "{nombre} · {formato}" }
+        fields:
+          - { name: nombre, label: Nombre del material, type: string }
+          - name: formato
+            label: Formato
+            type: select
+            options: { values: [Documento PDF, Documento editable, Hoja de cálculo, Datos abiertos (CSV), Aplicación web (Google Apps Script), Vídeo, Enlace web, Otro] }
+          - { name: url, label: Enlace (URL), type: string, pattern: "^$|^https://.+" }
+          - { name: archivo, label: Archivo, type: file, options: { extensions: [pdf, docx, xlsx, csv, pptx, png, jpg, zip] } }
+      - name: licencia
+        label: Licencia
+        type: select
+        default: CC BY-NC-SA 4.0 (la del proyecto)
+        options: { values: ["CC BY-NC-SA 4.0 (la del proyecto)", Otra (explícala en la nota)] }
+      - { name: nota_licencia, label: Nota de licencia o de derechos de terceros, type: text }
+      - name: autoria
+        label: Autoría del recurso (CRediT)
+        type: object
+        description: Opcional. Si la dejas vacía, la web atribuye el recurso al equipo de la edición.
+        list:
+          collapsible: { collapsed: true, summary: "{nombre} {apellidos} · {grado}" }
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: apellidos, label: Apellidos, type: string }
+          - { name: orcid, label: ORCID, type: string, pattern: "^$|^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$" }
+          - name: roles
+            label: Roles CRediT
+            type: select
+            options:
+              multiple: true
+              values: [Conceptualización, Curación de datos, Análisis formal, Adquisición de financiación, Investigación, Metodología, Administración del proyecto, Recursos, Software, Supervisión, Validación, Visualización, Redacción – borrador original, Redacción – revisión y edición]
+          - name: grado
+            label: Grado de participación
+            type: select
+            options: { values: [Principal, Igual, De apoyo] }
+      - name: ia
+        label: Declaración de uso de IA generativa
+        type: object
+        fields:
+          - name: usada
+            label: ¿Se ha utilizado IA generativa?
+            type: select
+            default: Sin declarar
+            options: { values: [Sin declarar, "No", "Sí"] }
+          - name: herramientas
+            label: Herramientas
+            type: select
+            options: { multiple: true, values: [ChatGPT, Claude, Gemini, Microsoft Copilot, IA integrada en Canva, IA integrada en Genially, Generador de imágenes] }
+          - name: fines
+            label: Para qué
+            type: select
+            options:
+              multiple: true
+              values: [proponer ideas o la estructura del recurso, redactar o reformular textos, generar preguntas o casos, crear imágenes o elementos gráficos, escribir o depurar código, revisar la ortografía y el estilo]
+          - name: grado
+            label: Grado de uso
+            type: select
+            options: { values: [Puntual, Parcial, Sustancial] }
+      - { name: visible, label: Mostrar en la web, type: boolean, default: true }
+      - { name: actualizado, label: Última actualización, type: date, options: { format: yyyy-MM-dd } }
+
+  # ------------------------------------------------------------------ TRANSFERENCIA
+  - name: transferencia
+    label: Transferencia y publicaciones
+    type: collection
+    path: _data/transferencia
+    format: json
+    filename:
+      template: "{fields.anio}-{fields.titulo}.json"
+      field: create
+    view:
+      primary: titulo
+      fields: [titulo, tipo, anio]
+      sort: [anio, titulo]
+      default: { sort: anio, order: desc }
+      search: [titulo, autores, medio]
+    fields:
+      - name: tipo
+        label: Tipo
+        type: select
+        required: true
+        options:
+          values:
+            - Comunicación oral en congreso
+            - Póster en congreso
+            - Ponencia o conferencia invitada
+            - Artículo en revista
+            - Capítulo de libro
+            - Libro
+            - Jornada o seminario de innovación docente
+            - Premio o reconocimiento
+            - Difusión en medios
+            - Otro
+      - { name: titulo, label: Título, type: string, required: true }
+      - { name: autores, label: Autoría, type: string, description: "Como en la cita APA: Bravo Castillo, A., García Carrera, P. y …" }
+      - { name: anio, label: Año, type: string, required: true, pattern: "^[0-9]{4}$" }
+      - { name: fecha, label: Fecha (opcional), type: date, options: { format: yyyy-MM-dd } }
+      - { name: medio, label: Congreso, revista, editorial o medio, type: string }
+      - { name: lugar, label: Lugar (congresos), type: string }
+      - name: alcance
+        label: Alcance
+        type: select
+        options: { values: [Internacional, Nacional, Autonómico, Institucional] }
+      - name: estado
+        label: Estado
+        type: select
+        default: Publicado o presentado
+        options: { values: [Publicado o presentado, Aceptado, Enviado, En preparación] }
+      - { name: doi, label: DOI (opcional), type: string, description: "Solo el número: 10.xxxx/xxxxx" }
+      - { name: url, label: Enlace (opcional), type: string, pattern: "^$|^https://.+" }
+      - name: ediciones
+        label: Ediciones relacionadas
+        type: select
+        options: { multiple: true, values: ["2025-26", "2026-27", "2027-28"] }
+      - { name: cita, label: Cita completa (opcional), type: text, description: "Si la escribes, se muestra tal cual en lugar de la cita automática." }
+      - { name: visible, label: Mostrar en la web, type: boolean, default: true }
+
+  # ------------------------------------------------------------------ PRODUCTOS DEL ALUMNADO
+  - name: productos
+    label: Propuestas del alumnado
+    type: collection
+    path: _data/productos
+    format: json
+    filename:
+      template: "{fields.edicion}-{fields.titulo}.json"
+      field: create
+    view:
+      primary: titulo
+      fields: [titulo, edicion, grado, consentimiento]
+      sort: [edicion, titulo]
+      default: { sort: edicion, order: desc }
+    fields:
+      - { name: titulo, label: Título de la propuesta, type: string, required: true }
+      - name: edicion
+        label: Edición
+        type: select
+        required: true
+        options: { values: ["2025-26", "2026-27", "2027-28"] }
+      - name: grado
+        label: Grado
+        type: select
+        options: { values: [Educación Infantil, Educación Primaria, Psicología] }
+      - name: tipo
+        label: Tipo de producto
+        type: select
+        options: { values: [Póster, Píldora en vídeo, Página web o blog, Otro] }
+      - { name: pildora, label: Código de la píldora a la que responde, type: string, pattern: "^$|^P[0-9]{2,3}$" }
+      - { name: autoria, label: Autoría tal como se autorizó, type: string, description: "Nombres del equipo o «Equipo 12, grupo B», según lo que hayan autorizado." }
+      - { name: resumen, label: Resumen (opcional), type: text }
+      - { name: url, label: Enlace (opcional), type: string, pattern: "^$|^https://.+" }
+      - { name: archivo, label: Archivo (opcional), type: file, options: { extensions: [pdf, png, jpg] } }
+      - name: consentimiento
+        label: Todo el equipo ha firmado la autorización de difusión en esta web
+        type: boolean
+        default: false
+        description: Si no está marcado, la propuesta NO se muestra, aunque «Mostrar en la web» esté activado.
+      - { name: visible, label: Mostrar en la web, type: boolean, default: true }
+
+  # ------------------------------------------------------------------ AJUSTES
+  - name: sitio
+    label: Ajustes del sitio
+    type: file
+    path: _data/sitio.json
+    format: json
+    fields:
+      - { name: titulo, label: Título del proyecto, type: string }
+      - { name: titulo_corto, label: Título corto (cabecera), type: string }
+      - { name: titulo_deposito, label: Título del depósito en Zenodo, type: string }
+      - { name: presentacion, label: Presentación, type: text }
+      - { name: objetivos, label: Objetivos, type: string, list: true }
+      - { name: ejes, label: Ejes del proyecto, type: string, list: true }
+      - { name: metodologias, label: Metodologías, type: string, list: true }
+      - { name: institucion, label: Institución, type: string }
+      - { name: facultad, label: Facultad, type: string }
+      - { name: departamento, label: Departamento, type: string }
+      - { name: area, label: Área, type: string }
+      - { name: convocatoria, label: Convocatoria, type: string }
+      - { name: autoria_cita, label: Autoría para citar el depósito, type: text, description: "Igual que en Zenodo (creators), en formato APA. Actualízala al publicar cada versión." }
+      - { name: anio, label: Año de la versión vigente, type: string }
+      - { name: version, label: Versión vigente, type: string, description: "Igual que la etiqueta de la release de GitHub, sin la v (1.0, 2.0…)." }
+      - { name: doi, label: DOI general de Zenodo, type: string, description: "El de «Cite all versions», p. ej. 10.5281/zenodo.1234567." }
+      - { name: comunidad_zenodo, label: Comunidad de Zenodo, type: string }
+      - { name: repositorio, label: Repositorio de GitHub, type: string }
+      - { name: licencia, label: Licencia, type: string }
+      - { name: licencia_url, label: Enlace de la licencia, type: string }
+      - { name: correo_contacto, label: Correo de contacto (visible en la web), type: string }
+      - name: listas_youtube
+        label: Listas de reproducción de YouTube
+        type: object
+        list: true
+        fields:
+          - { name: grado, label: Grado o asignatura, type: string }
+          - { name: url, label: Enlace de la lista, type: string }
+      - { name: orden_grados, label: Orden de los grados en la web, type: string, list: true }
+      - { name: nota_logo, label: Nota sobre el logotipo (pie de página), type: string }
+      - { name: goatcounter, label: Código de GoatCounter (visitas, opcional), type: string }

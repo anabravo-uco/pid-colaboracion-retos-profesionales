@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Píldoras audiovisuales · Fomentando la colaboración para afrontar los retos profesionales actuales en la educación</title>
+<meta name="description" content="Catálogo de píldoras audiovisuales en las que profesionales de la educación en activo plantean situaciones-problema reales.">
+<link rel="icon" href="assets/img/logo-mini.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body data-page="pildoras">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/img/logo-mini.png" alt=""><span id="brandName">Retos profesionales en la educación</span></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="./" data-page="inicio">Proyecto</a>
+      <a href="pildoras.html" data-page="pildoras">Píldoras</a>
+      <a href="recursos.html" data-page="recursos">Recursos</a>
+      <a href="equipo.html" data-page="equipo">Equipo</a>
+      <a href="resultados.html" data-page="resultados">Resultados</a>
+      <a href="alumnado.html" data-page="alumnado">Propuestas del alumnado</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-h">
+    <p class="eyebrow">Situaciones-problema reales</p>
+    <h1>Píldoras audiovisuales</h1>
+    <p class="intro">Profesionales de la educación en activo describen su contexto y plantean un reto real de su práctica diaria. Cada píldora indica los contenidos de Psicología de la Educación con los que se relaciona, así que puede usarse también como caso independiente en clase.</p>
+  </div>
+  <div class="filters">
+    <div class="filters-row">
+      <label class="field"><span class="sr-only">Buscar</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input class="input" id="q" type="search" placeholder="Buscar por título, contenido o profesional…" autocomplete="off"></label>
+      <label class="field"><span class="sr-only">Edición</span><select class="select" id="fEd"><option value="">Todas las ediciones</option></select></label>
+      <label class="field"><span class="sr-only">Destinatarios</span><select class="select" id="fBil"><option value="">Todos los grupos</option><option value="si">Solo grupos bilingües</option></select></label>
+      <label class="field"><span class="sr-only">Estado</span><select class="select" id="fDisp"><option value="">Con y sin vídeo</option><option value="si">Solo con vídeo disponible</option></select></label>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtrar por grado"></div>
+  </div>
+  <div class="results-bar" aria-live="polite"><span id="count"></span><button class="linkbtn" id="reset" hidden>Quitar filtros</button></div>
+  <div id="lista"><p class="empty">Cargando píldoras…</p></div>
+  <p class="note" id="notaVideos"></p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span id="footTxt">Proyecto de innovación docente · Universidad de Córdoba</span>
+    <span class="cc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M10.2 9.8a3 3 0 1 0 0 4.4M16.2 9.8a3 3 0 1 0 0 4.4"/></svg><a id="footLic" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></span>
+  </div>
+</footer>
+<script src="assets/js/comun.js"></script>
+<script src="assets/js/pildoras.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "title": "Fomentando la colaboración para afrontar los retos profesionales actuales en la educación: recursos del proyecto de innovación docente (Universidad de Córdoba)",
+  "upload_type": "lesson",
+  "description": "<p>Recursos docentes en abierto del proyecto de innovación docente «Fomentando la colaboración para afrontar los retos profesionales actuales en la educación» (Universidad de Córdoba). El proyecto acerca la realidad profesional a la formación inicial de los futuros profesionales de la educación: a partir de píldoras audiovisuales en las que profesionales en activo plantean situaciones-problema reales, equipos estables de estudiantes analizan el contexto con una matriz DAFO, buscan evidencia científica, diseñan una propuesta psicoeducativa, la comunican y la evalúan de forma compartida.</p><p><strong>Contenido</strong> (carpeta <code>materiales/</code>): guía para replicar el proyecto; índice de las píldoras audiovisuales con sus enlaces (XLSX y CSV); Taller I, matriz DAFO como herramienta de análisis educativo; Taller II, búsqueda en bases de datos; escala de coevaluación entre equipos y autoevaluación; ficha de los instrumentos de evaluación del proyecto (pre-post); y ficha de la edición. Incluye las fuentes editables (DOCX), los datos de la web del proyecto (<code>_data/</code>) y su código.</p><p><strong>Edición 2025-26</strong> (versión 1.0; proyecto 2025-1-4010; coordinación: Ana Bravo Castillo): asignaturas de Psicología de la Educación de los grados en Educación Primaria (1.º), Educación Infantil (2.º) y Psicología (3.º); 485 estudiantes, 117 equipos y 19 píldoras de 12 profesionales.</p><p><strong>Depósito vivo</strong>: cada edición del proyecto se publica como una versión nueva que conserva los materiales anteriores y añade los nuevos. La web del proyecto (https://anabravo-uco.github.io/pid-colaboracion-retos-profesionales/) muestra las píldoras, el equipo de cada edición con su contribución (taxonomía CRediT), los resultados y la transferencia. Las píldoras se alojan en YouTube y no forman parte del depósito ni de su licencia. El archivo LICENSE detalla los elementos de terceros excluidos de la licencia.</p>",
+  "creators": [
+    {
+      "name": "Bravo Castillo, Ana",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0000-0003-3312-5523"
+    },
+    {
+      "name": "Álvarez Cantador, Rocío",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0009-0001-8335-9355"
+    },
+    {
+      "name": "Álvarez Turrado, Blanca Gemma",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0009-0005-9375-4606"
+    },
+    {
+      "name": "Cabrera Vázquez, Antonio",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0000-0001-9062-7197"
+    },
+    {
+      "name": "García Carrera, Paula",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0000-0002-5116-414X"
+    },
+    {
+      "name": "Misas Moreno, María",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0009-0002-0855-9151"
+    },
+    {
+      "name": "Rodríguez de Arriba, María Luisa",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0000-0002-1693-257X"
+    },
+    {
+      "name": "Romera Félix, Eva María",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0000-0002-9414-8019"
+    },
+    {
+      "name": "Camacho López, Antonio",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0000-0003-1690-834X"
+    },
+    {
+      "name": "Ruiz Berindoague, Camila Valentina",
+      "affiliation": "Universidad de Córdoba",
+      "orcid": "0009-0009-5344-4776"
+    }
+  ],
+  "license": "cc-by-nc-sa-4.0",
+  "access_right": "open",
+  "language": "spa",
+  "keywords": [
+    "innovación docente",
+    "aprendizaje basado en problemas",
+    "aprendizaje cooperativo",
+    "Psicología de la Educación",
+    "formación inicial del profesorado",
+    "Educación Infantil",
+    "Educación Primaria",
+    "Psicología",
+    "píldoras audiovisuales",
+    "matriz DAFO",
+    "competencia investigadora",
+    "evaluación entre iguales",
+    "recursos educativos abiertos",
+    "educación superior"
+  ],
+  "communities": [
+    {
+      "identifier": "innovacion-docente-psicologia-educacion-uco"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://anabravo-uco.github.io/pid-colaboracion-retos-educacion/",
+      "relation": "isSupplementedBy",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://www.youtube.com/playlist?list=PL5VcoBxPjGkeH3YYqmYtb_PMa6ckrl2oM",
+      "relation": "isSupplementedBy",
+      "resource_type": "video"
+    },
+    {
+      "identifier": "https://www.youtube.com/playlist?list=PL5VcoBxPjGkdGL2dICB27kIVGT6AyNBm1",
+      "relation": "isSupplementedBy",
+      "resource_type": "video"
+    },
+    {
+      "identifier": "https://www.youtube.com/playlist?list=PL5VcoBxPjGkfOMT-ZcLA3u-BqvsUHcwOL",
+      "relation": "isSupplementedBy",
+      "resource_type": "video"
+    }
+  ],
+  "notes": "Financiación: Plan de Innovación y Buenas Prácticas Docentes 2025-2026 de la Universidad de Córdoba (Vicerrectorado de Estudios de Grado, Calidad e Innovación Docente), proyecto 2025-1-4010 (1.600 €). Periodo de la edición 2025-26: 1 de octubre de 2025 a 31 de julio de 2026. Orden de autoría: coordinación de la edición inicial y, después, orden alfabético; quienes se incorporan en ediciones posteriores se añaden al final. La contribución de cada persona (taxonomía CRediT) se detalla en la web del proyecto."
+}

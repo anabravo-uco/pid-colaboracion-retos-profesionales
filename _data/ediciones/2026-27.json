@@ -1,0 +1,55 @@
+{
+  "curso": "2026-27",
+  "codigo": "2026-1-4018",
+  "estado": "En curso",
+  "convocatoria": "Plan de Innovación Docente 2026-2027 · concesión provisional (Resolución de 15 de octubre de 2026, BOUCO 16/10/2026)",
+  "financiacion": 1720,
+  "inicio": "",
+  "fin": "",
+  "version_zenodo": "2.0",
+  "doi_version": "",
+  "resumen": "Segunda edición. Se amplía a Psicología del Desarrollo (Grado en Educación Infantil), se graban nuevas píldoras y se incorpora un taller sobre el uso crítico, ético y responsable de la IA generativa.",
+  "asignaturas": [
+    {
+      "titulacion": "Grado en Educación Infantil",
+      "asignatura": "Psicología del Desarrollo",
+      "curso": "1º",
+      "grupos": 3,
+      "estudiantes": 199,
+      "observaciones": "Asignatura de nueva incorporación (1.er cuatrimestre). Grupos de 68, 65 y 66 estudiantes."
+    },
+    {
+      "titulacion": "Grado en Educación Primaria",
+      "asignatura": "Psicología de la Educación y del Desarrollo",
+      "curso": "1º",
+      "grupos": 3,
+      "estudiantes": 204,
+      "observaciones": "Grupos de 66, 65 y 73 estudiantes; el grupo 2 no participa."
+    },
+    {
+      "titulacion": "Grado en Educación Infantil",
+      "asignatura": "Psicología de la Educación",
+      "curso": "2º",
+      "grupos": 3,
+      "estudiantes": 195,
+      "observaciones": "Cifra aproximada (3 grupos de unos 65 estudiantes)."
+    },
+    {
+      "titulacion": "Grado en Psicología",
+      "asignatura": "Psicología de la Educación II",
+      "curso": "3º",
+      "grupos": 1,
+      "estudiantes": 65
+    }
+  ],
+  "estudiantes_previstos": 480,
+  "equipos": null,
+  "equipos_comparten": null,
+  "nota_media": null,
+  "novedades": [
+    "Nueva asignatura: Psicología del Desarrollo (Grado en Educación Infantil)",
+    "Nuevas píldoras audiovisuales (1-2 por asignatura participante y 6 para la nueva)",
+    "Taller sobre el uso crítico, ético y responsable de la IA generativa"
+  ],
+  "lecciones": []
+}

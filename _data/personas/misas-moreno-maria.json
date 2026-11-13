@@ -1,0 +1,34 @@
+{
+  "nombre": "María",
+  "apellidos": "Misas Moreno",
+  "orcid": "0009-0002-0855-9151",
+  "institucion": "Universidad de Córdoba",
+  "departamento": "",
+  "orden_autoria": 6,
+  "participaciones": [
+    {
+      "edicion": "2025-26",
+      "papel": "Miembro del equipo",
+      "roles": [
+        "Conceptualización",
+        "Análisis formal",
+        "Investigación",
+        "Metodología",
+        "Recursos",
+        "Software",
+        "Validación",
+        "Visualización",
+        "Redacción – borrador original",
+        "Redacción – revisión y edición"
+      ],
+      "grado": "Igual"
+    },
+    {
+      "edicion": "2026-27",
+      "papel": "Miembro del equipo",
+      "roles": [],
+      "grado": ""
+    }
+  ],
+  "visible": true
+}
