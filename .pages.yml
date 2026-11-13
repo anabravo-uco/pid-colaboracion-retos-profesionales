@@ -319,6 +319,7 @@ content:
         required: true
         options:
           values:
+            - Simposio en congreso
             - Comunicación oral en congreso
             - Póster en congreso
             - Ponencia o conferencia invitada
